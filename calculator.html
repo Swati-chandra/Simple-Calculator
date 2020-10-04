@@ -11,7 +11,8 @@ height:450px;
 width:320px;
 margin-left:100px;
 background-color:green;
-border-radius:20px;
+border-radius: 20px;
+box-shadow: 20px; 0 4px 8px 0 rgba(0,0,0,0.4),0 6px 20px 0 rgba(0,0,0,0.1);
 }
 .displaydesign
 {
@@ -57,7 +58,14 @@ document.getElementById('final_output').value=soln;
   {
     document.getElementById("final_output").value="";
   }
-
+  
+  function CE()
+  {
+    var txt=document.getElementById("final_output").value;
+    txt=txt.slice(0,-1);
+    document.getElementById("final_output").value=txt;
+  }
+  
 </script>
 
 </head>
@@ -66,6 +74,8 @@ document.getElementById('final_output').value=soln;
 <h1>Simple Calculator</h1>
 <div class="box">
 <input type="text"class="displaydesign" id="final_output"><br/>
+<button type="button"class="buttondesign" onclick="C()">C</button>
+<button type="button"class="buttondesign" onclick="CE()">CE</button>                                  
 <button type="button"class="buttondesign" onclick="display('7')">7</button>
 <button type="button"class="buttondesign" onclick="display('8')">8</button>
 <button type="button"class="buttondesign" onclick="display('9')">9</button>
@@ -82,8 +92,7 @@ document.getElementById('final_output').value=soln;
 <button type="button"class="buttondesign" onclick="display('.')">.</button>
 <button type="button"class="buttondesign" onclick="display('/')">/</button>
 <button type="button"class="buttondesign" onclick="solve()">=</button>
- <button type="button"class="buttondesign" onclick="display('C')">C</button>
-                                        
+
 </div>
 </body>
 
