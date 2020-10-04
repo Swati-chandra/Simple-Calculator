@@ -52,6 +52,11 @@ var expr=document.getElementById('final_output').value;
 var soln=eval(expr);
 document.getElementById('final_output').value=soln;
 }
+  
+  function C()
+  {
+    document.getElementById("final_output").value="";
+  }
 
 </script>
 
@@ -77,6 +82,8 @@ document.getElementById('final_output').value=soln;
 <button type="button"class="buttondesign" onclick="display('.')">.</button>
 <button type="button"class="buttondesign" onclick="display('/')">/</button>
 <button type="button"class="buttondesign" onclick="solve()">=</button>
+ <button type="button"class="buttondesign" onclick="display('C')">C</button>
+                                        
 </div>
 </body>
 
